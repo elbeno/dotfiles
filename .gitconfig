@@ -1,0 +1,23 @@
+[core]
+	legacyheaders = false
+	pager = less -r
+[push]
+	default = upstream
+[color]
+	ui = auto
+	interactive = auto
+[alias]
+	st = status
+	co = checkout
+	a = add
+	cm = commit
+        cp = cherry-pick
+	ll = log --graph --oneline --decorate
+	pr = pull --rebase
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	dt = difftool -d
+[diff]
+	guitool = meld
+  tool = meld
+[difftool]
+	prompt = false
