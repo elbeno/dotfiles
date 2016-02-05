@@ -1,6 +1,6 @@
 [core]
 	legacyheaders = false
-	pager = less -r
+	pager = less -R
 [color]
 	ui = auto
 	interactive = auto
