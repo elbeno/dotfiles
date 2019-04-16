@@ -1,3 +1,7 @@
 [flake8]
-ignore = E121,E111,E302
+ignore = E402,W504
 max-line-length = 100
+
+[pycodestyle]
+ignore = E402,W504
+max_line_length = 100
