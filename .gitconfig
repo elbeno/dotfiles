@@ -1,37 +1,57 @@
-[core]
-	legacyheaders = false
-	pager = less -R
-	excludesfile = ~/.gitignore
-	editor = emacsclient
+[branch]
+	sort = -committerdate
 [color]
 	ui = auto
 	interactive = auto
+[column]
+	ui = auto
+[commit]
+	gpgsign = true
+[core]
+	editor = emacsclient
+	excludesfile = ~/.gitignore
+	fsmonitor = true
+	legacyheaders = false
+	pager = less -R
+	untrackedcache = true
 [diff]
 	guitool = meld
 	tool = meld
 	mnemonicprefix = true
 [difftool]
 	prompt = false
+[fetch]
+	writeCommitGraph = true
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
 [push]
 	default = upstream
+[rerere]
+	enabled = true
 [alias]
 	a = add
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	bl = blame -w -C -C -C
 	ca = commit --amend
 	cane = commit --amend --no-edit
 	cm = commit
 	co = checkout
 	cp = cherry-pick
+	curbr = rev-parse --abbrev-ref HEAD
 	d = diff
 	dt = difftool -d
 	f = fetch
 	l = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --abbrev-commit --date=short
 	lg = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --graph --date=short
 	ll = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --decorate --numstat --date=short
+	pf = push --force-with-lease
 	pr = pull --rebase
 	root = rev-parse --show-toplevel
+	sa = stash --all
 	st = status
 	su = submodule update --init
 	wip = commit -am "WIP"
-[init]
-	defaultBranch = main
+[user]
+	signingkey = ~/.ssh/id_rsa.pub
