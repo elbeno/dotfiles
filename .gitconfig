@@ -43,6 +43,7 @@
 	d = diff
 	dt = difftool -d
 	f = fetch
+	i = !git init && git commit --allow-empty -m ':tada: Initial commit'
 	l = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --abbrev-commit --date=short
 	lg = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --graph --date=short
 	ll = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --decorate --numstat --date=short
