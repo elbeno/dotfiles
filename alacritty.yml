@@ -32,7 +32,7 @@ font:
   bold_italic:
     family: Berkeley Mono
     style: Bold Italic
-  size: 11.5
+  size: 14
 
 colors:
   primary:
