@@ -1,0 +1,4 @@
+ble-bind -f 'C-BS' kill-backward-eword
+ble-bind -f 'C-_' kill-backward-eword
+ble-bind -f 'M-BS' kill-backward-eword
+ble-bind -f 'C-M-?' kill-backward-eword
