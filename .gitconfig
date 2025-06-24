@@ -35,6 +35,8 @@
 	autocorrect = prompt
 [init]
 	defaultBranch = main
+[merge]
+	ff = only
 [push]
 	autoSetupRemote = true
 	default = upstream
