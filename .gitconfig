@@ -51,6 +51,8 @@
 [rerere]
 	autoupdate = true
 	enabled = true
+[status]
+	branch = true
 [tag]
 	sort = -version:refname
 [user]
