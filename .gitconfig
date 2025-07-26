@@ -13,11 +13,12 @@
 	excludesfile = ~/.gitignore
 	fsmonitor = true
 	legacyheaders = false
-	pager = less -XRF
+	pager = "diff-so-fancy | less -XRF"
 	untrackedCache = true
 [diff]
 	algorithm = histogram
 	colorMoved = plain
+	external = difft
 	guitool = meld
 	mnemonicPrefix = true
 	renames = true
@@ -35,6 +36,8 @@
 	autocorrect = prompt
 [init]
 	defaultBranch = main
+[interactive]
+	diffFilter = "diff-so-fancy --patch"
 [merge]
 	ff = only
 [push]
@@ -49,7 +52,7 @@
 	autoupdate = true
 	enabled = true
 [tag]
-	sort = version:refname
+	sort = -version:refname
 [user]
 	signingKey = ~/.ssh/id_rsa.pub
 [alias]
@@ -74,6 +77,7 @@
 	root = rev-parse --show-toplevel
 	sa = stash --all
 	sb = rev-parse --abbrev-ref HEAD
+	sh = show --ext-diff
 	st = status
 	su = submodule update --init
 	wip = commit -am "WIP"
