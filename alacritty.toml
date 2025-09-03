@@ -12,22 +12,22 @@ shape = "Block"
 TERM = "alacritty-direct"
 
 [font]
-size = 14
+size = 11.5
 
 [font.bold]
-family = "Berkeley Mono"
+family = "BerkeleyMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Berkeley Mono"
+family = "BerkeleyMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Berkeley Mono"
+family = "BerkeleyMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Berkeley Mono"
+family = "BerkeleyMono Nerd Font"
 style = "Regular"
 
 [[keyboard.bindings]]
@@ -1058,7 +1058,7 @@ mods = "Shift|Control|Alt"
 [selection]
 save_to_clipboard = true
 
-[shell]
+[terminal.shell]
 args = ["--login"]
 program = "/usr/bin/bash"
 
@@ -1069,3 +1069,5 @@ opacity = 0.95
 [window.dimensions]
 columns = 100
 lines = 80
+
+[terminal]
