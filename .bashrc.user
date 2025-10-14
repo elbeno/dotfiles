@@ -1,0 +1,31 @@
+. /usr/share/bash-completion/completions/git
+
+if [ -f "$HOME/dev/bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1
+    GIT_PROMPT_THEME=Single_line_Ubuntu
+    source $HOME/dev/bash-git-prompt/gitprompt.sh
+fi
+
+export CMAKE_GENERATOR=Ninja
+export CMAKE_EXPORT_COMPILE_COMMANDS=1
+export EDITOR="emacsclient -nw"
+export ALTERNATE_EDITOR=""
+export CPM_SOURCE_CACHE=~/dev/.cpm_cache
+export N_PREFIX=~/dev/.node
+export PATH=~/.local/bin:~/.local/share/gem/ruby/3.3.0/bin:~/.cargo/bin:~/dev/.npm-packages/bin:${N_PREFIX}/bin:$PATH
+export COLORTERM=truecolor
+alias e='emacs -nw'
+
+if command -v batcat &> /dev/null; then
+  alias cat=batcat
+fi
+if command -v eza &> /dev/null; then
+  alias ls=eza
+fi
+
+[[ -f $HOME/.cargo/env ]] && . "$HOME/.cargo/env"
+
+[[ -f $HOME/.local/share/blesh/ble.sh ]] && source $HOME/.local/share/blesh/ble.sh
+[[ -f $HOME/.atuin/bin/env ]] && . "$HOME/.atuin/bin/env"
+eval "$(atuin init bash)"
+
