@@ -14,6 +14,7 @@ export CPM_SOURCE_CACHE=~/dev/.cpm_cache
 export N_PREFIX=~/dev/.node
 export PATH=~/.local/bin:~/.local/share/gem/ruby/3.3.0/bin:~/.cargo/bin:~/dev/.npm-packages/bin:${N_PREFIX}/bin:$PATH
 export COLORTERM=truecolor
+export LSP_USE_PLISTS=true
 alias e='emacs -nw'
 
 if command -v batcat &> /dev/null; then
