@@ -74,6 +74,7 @@
 	l = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --abbrev-commit --date=short
 	lg = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --graph --date=short
 	ll = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --decorate --numstat --date=short
+	pe = !$(echo $USER_GIT_REPO $(git curbr) | awk '{printf \"git push --force-with-lease %s %s:%s\", $1, $2, $2}')
 	pf = push --force-with-lease
 	pr = pull --rebase
 	root = rev-parse --show-toplevel
