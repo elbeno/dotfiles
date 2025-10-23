@@ -12,7 +12,7 @@ shape = "Block"
 TERM = "alacritty-direct"
 
 [font]
-size = 14
+size = 11.5
 
 [font.bold]
 family = "BerkeleyMono Nerd Font"
@@ -29,6 +29,21 @@ style = "Italic"
 [font.normal]
 family = "BerkeleyMono Nerd Font"
 style = "Regular"
+
+[selection]
+save_to_clipboard = true
+
+[terminal.shell]
+args = ["--login"]
+program = "/usr/bin/bash"
+
+[window]
+dynamic_title = true
+opacity = 0.95
+
+[window.dimensions]
+columns = 100
+lines = 80
 
 [[keyboard.bindings]]
 chars = "\u001B\u001F*b\u001F"
@@ -1054,20 +1069,3 @@ mods = "Control|Alt"
 chars = "\u001B\u001FYG\u001F"
 key = "PageDown"
 mods = "Shift|Control|Alt"
-
-[selection]
-save_to_clipboard = true
-
-[terminal.shell]
-args = ["--login"]
-program = "/usr/bin/bash"
-
-[window]
-dynamic_title = true
-opacity = 0.95
-
-[window.dimensions]
-columns = 100
-lines = 80
-
-[terminal]
