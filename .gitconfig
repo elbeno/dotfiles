@@ -9,7 +9,6 @@
 	gpgsign = true
 	verbose = true
 [core]
-	editor = emacsclient
 	excludesfile = ~/.gitignore
 	fsmonitor = true
 	legacyheaders = false

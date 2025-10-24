@@ -8,14 +8,14 @@ fi
 
 export CMAKE_GENERATOR=Ninja
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
-export EDITOR="emacsclient -nw"
+export EDITOR="emacsclient.tui"
 export ALTERNATE_EDITOR=""
 export CPM_SOURCE_CACHE=~/dev/.cpm_cache
 export N_PREFIX=~/dev/.node
 export PATH=~/.local/bin:~/.local/share/gem/ruby/3.3.0/bin:~/.cargo/bin:~/dev/.npm-packages/bin:${N_PREFIX}/bin:$PATH
 export COLORTERM=truecolor
 export LSP_USE_PLISTS=true
-alias e='emacs -nw'
+alias e=$EDITOR
 
 if command -v batcat &> /dev/null; then
   alias cat=batcat
