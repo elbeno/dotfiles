@@ -4,7 +4,7 @@ Documentation=info:emacs man:emacs(1) https://gnu.org/software/emacs/
 
 [Service]
 Type=notify
-ExecStart=/usr/local/bin/emacs --fg-daemon=gui
+ExecStart=bash -ic '/usr/local/bin/emacs --fg-daemon=gui'
 ExecStop=/usr/local/bin/emacsclient -s gui --eval "(kill-emacs)"
 
 # Emacs will exit with status 15 after having received SIGTERM, which
